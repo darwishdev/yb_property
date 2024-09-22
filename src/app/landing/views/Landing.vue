@@ -1,0 +1,17 @@
+<script lang="ts">
+const loadPropertyData = () => new Promise<Record<string, any>[]>((resolve, reject) => {
+	setTimeout(() => {
+		resolve([{}])
+	}, 3000)
+})
+</script>
+
+
+<script setup lang="ts">
+const data = await loadPropertyData()
+
+
+</script>
+<template>
+	<h2>landing page</h2>
+</template>
