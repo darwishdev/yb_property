@@ -19,7 +19,7 @@ h1,
 h2,
 h3,
 p {
-  background: linear-gradient(90deg, black, transparent);
+  background: linear-gradient(90deg, var(--p-text-color), transparent);
   background-repeat: no-repeat;
   background-size: 200%;
   animation: reveal both linear;

@@ -16,7 +16,7 @@ const loadIcon = async (props: AppIconProps): Promise<string> => {
 }
 </script>
 <script setup lang="ts">
-import { h } from 'vue';
+import { h, useAttrs } from 'vue';
 import type { AppIconProps } from '@/common/types/types'
 import db from '@/common/db/db'
 const props = defineProps<AppIconProps>();
@@ -25,7 +25,7 @@ const renderIcon = () => {
 	return props.iconType == 'primevue' ? h('span', {
 		class: `pi pi-${icon}`,
 	}) : h('span', {
-		class: `app-icon ${props.size}`,
+		class: `app-icon ${props.size} `,
 		attrs: props.color,
 		innerHTML: icon,
 	},)

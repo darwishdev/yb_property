@@ -4,8 +4,6 @@ import apiClient from '@/common/api/ApiClient';
 import AppNav from './AppNav.vue';
 import { ThemeDefaults } from '../db/types';
 import { useThemeStore } from '../stores/theme';
-import { h } from 'vue';
-
 const initIcons = (): Promise<void> => {
 	return new Promise((resolve) => {
 		db.icons.count().then(count => {
@@ -43,17 +41,18 @@ const initTheme = async () => {
 </script>
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
+import { ref } from 'vue';
 import { RouterView } from 'vue-router'
+import Drawer from 'primevue/drawer';
+const isMenuOpenedRef = ref(false)
 const i18n = useI18n()
 await initIcons()
 const theme = await initTheme()
-const themeStore = useThemeStore()
 if (theme.preferedLocale) i18n.locale.value = theme.preferedLocale
 const toggleDarkMode = () => {
-	themeStore.showDialog(h('h2', 'hello'))
-	//theme.darkMode = !theme.darkMode
-	//db.theme.update(theme.id, theme)
-	//document.documentElement.classList.toggle('my-app-dark')
+	theme.darkMode = !theme.darkMode
+	db.theme.update(theme.id, theme)
+	document.documentElement.classList.toggle('my-app-dark')
 }
 const toggleLocale = () => {
 	theme.preferedLocale = theme.preferedLocale == 'ar' ? 'en' : "ar"
@@ -64,6 +63,10 @@ const toggleLocale = () => {
 
 
 }
+const toggleMenu = () => {
+	console.log('toggle menu')
+	isMenuOpenedRef.value = !isMenuOpenedRef.value
+}
 </script>
 
 <template>
@@ -71,12 +74,18 @@ const toggleLocale = () => {
 
 		<div class="navigation">
 			<app-image src="images/logo.webp" />
-			<AppNav />
+			<AppNav class="show-desktop" />
 			<div class="icons">
-				<app-icon icon="globe" :click="toggleLocale"></app-icon>
 				<app-icon icon="moon" :click="toggleDarkMode"></app-icon>
+				<app-icon icon="globe" :click="toggleLocale"></app-icon>
 
+				<app-icon icon="menu" :click="toggleMenu" class="hide-desktop"></app-icon>
 			</div>
+			<Drawer v-model:visible="isMenuOpenedRef" position="right" :header="$t('menu')">
+				<AppNav />
+			</Drawer>
+
+
 		</div>
 
 	</div>

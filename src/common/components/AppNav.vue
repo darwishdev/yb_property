@@ -1,30 +1,42 @@
 <script setup lang="ts">
-import Menubar from 'primevue/menubar';
-
-import { ref } from "vue";
-import { useI18n } from 'vue-i18n';
-const { t } = useI18n()
-const items = ref([
+import Button from 'primevue/button';
+const items = [
     {
-        label: t('about'),
+        label: 'about',
+        to: '#'
     },
     {
-        label: t('amenities'),
+        label: 'amenities',
+        to: '#'
     },
     {
-        label: t('types'),
+        label: 'types',
+        to: '#'
     },
     {
-        label: t('location'),
+        label: 'location',
+        to: '#'
     },
     {
-        label: t('contact'),
+        label: 'contact',
+        to: '#'
     },
-]);
+];
 </script>
 
 <template>
-    <div class="card">
-        <Menubar :model="items" />
-    </div>
+    <nav class="navigation-links">
+        <Button v-for="(item, index) in items" :key="index" :label="$t(item.label)" plain text />
+    </nav>
 </template>
+<style lang="scss">
+.navigation-links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    @media (min-width: 1025px) {
+        flex-direction: row;
+    }
+}
+</style>

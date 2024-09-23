@@ -13,185 +13,184 @@ const data = await loadPropertyData()
 
 </script>
 <template>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
-	<h2>landing page</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
+	<h2>{{ $t('about') }}</h2>
 </template>
