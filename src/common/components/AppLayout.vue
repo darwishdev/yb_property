@@ -4,6 +4,7 @@ import apiClient from '@/common/api/ApiClient';
 import AppNav from './AppNav.vue';
 import { ThemeDefaults } from '../db/types';
 import { useThemeStore } from '../stores/theme';
+import Loading from './Loading.vue';
 const initIcons = (): Promise<void> => {
 	return new Promise((resolve) => {
 		db.icons.count().then(count => {
@@ -98,14 +99,14 @@ const toggleMenu = () => {
 
 					<!-- loading state -->
 					<template #fallback>
-						Loading...
+						<Loading></Loading>
 					</template>
 				</Suspense>
 			</KeepAlive>
 		</template>
 	</RouterView>
 	<footer>
-		Footer goes here better be on a component
+		<!-- Footer goes here better be on a component -->
 	</footer>
 
 </template>
