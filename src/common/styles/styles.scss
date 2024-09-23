@@ -1,3 +1,4 @@
+@import "_animation";
 *{
     font-family: "Montserrat", sans-serif;  
 }
@@ -25,11 +26,42 @@ body{
     background-color:var(--background-color);
 }
 
+.ltr {
+    direction: ltr;
+}
+
+
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 3rem;
+}
+
+.show-desktop {
+    display: none !important;
+}
+
+/* Show on tablet and mobile, hide on desktop */
+.hide-desktop {
+    display: block;
+}
+
+@media (min-width: 1025px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .show-desktop {
+        display: block !important;
+    }
 }
 
 .app-icon {
     fill: var(--p-text-color)
 }
 
+.p-overlay-mask {
+    direction: ltr;
+}
