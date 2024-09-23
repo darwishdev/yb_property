@@ -9,15 +9,15 @@ const slots = defineSlots<AppIconSlots>();
 </script>
 
 <template>
-	<Suspense timeout="0">
+	<Suspense timeout="0" >
 		<template #default>
-			<div class="app-icon" v-if="typeof slots.top == 'function'">
+			<div class="app-icon" @click="props.click" v-if="typeof slots.top == 'function'">
 				<div class="top">
 					<component :is="slots.top"></component>
 				</div>
-				<AppIconIconInner :icon="props.icon" :color="props.color" :size="props.size" />
+				<AppIconIconInner  :icon="props.icon" :color="props.color" :size="props.size" />
 			</div>
-			<AppIconIconInner v-else :icon="props.icon" :color="props.color" :size="props.size" />
+			<AppIconIconInner v-else  @click="props.click"  :icon="props.icon" :color="props.color" :size="props.size" />
 		</template>
 		<template #fallback>
 			<div class="loading">

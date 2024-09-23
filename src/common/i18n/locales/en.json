@@ -1,3 +1,8 @@
 {
-	"hello": "hellow"
+	"hello": "hellow",
+	"about": "About",
+	"amenities": "Amenities",
+	"types": "Unit Types",
+	"location": "Location",
+	"contact": "Contact"
 }

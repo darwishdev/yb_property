@@ -2,9 +2,12 @@
 import db from '@/common/db/db';
 import apiClient from '@/common/api/ApiClient';
 import AppNav from './AppNav.vue';
+import { ThemeDefaults } from '../db/types';
+import { useThemeStore } from '../stores/theme';
+import { h } from 'vue';
 
 const initIcons = (): Promise<void> => {
-	return new Promise((resolve, reject) => {
+	return new Promise((resolve) => {
 		db.icons.count().then(count => {
 			count == 0 ? apiClient.iconsInputList({}).then((response) => {
 				db.icons.clear()
@@ -17,50 +20,101 @@ const initIcons = (): Promise<void> => {
 
 	})
 }
+const loadThemeDefaults = async (): Promise<ThemeDefaults> => {
+	const theme = await db.theme.toArray()
+	if (theme.length) {
+		return theme[0]
+	}
+	const newTheme = await db.theme.add({
+		darkMode: false,
+		preferedLocale: 'en',
+	})
+	return newTheme
+}
+
+
+const initTheme = async () => {
+	const theme = await loadThemeDefaults()
+	if (theme.darkMode) document.documentElement.classList.toggle('my-app-dark');
+	const dir = theme.preferedLocale == 'ar' ? 'rtl' : 'en'
+	document.documentElement.setAttribute('dir', dir)
+	return theme
+}
 </script>
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { RouterView } from 'vue-router'
-import { Suspense } from 'vue'
-import { useThemeStore } from '../stores/theme';
-const themStore = useThemeStore()
+const i18n = useI18n()
 await initIcons()
+const theme = await initTheme()
+const themeStore = useThemeStore()
+if (theme.preferedLocale) i18n.locale.value = theme.preferedLocale
+const toggleDarkMode = () => {
+	themeStore.showDialog(h('h2', 'hello'))
+	//theme.darkMode = !theme.darkMode
+	//db.theme.update(theme.id, theme)
+	//document.documentElement.classList.toggle('my-app-dark')
+}
+const toggleLocale = () => {
+	theme.preferedLocale = theme.preferedLocale == 'ar' ? 'en' : "ar"
+	const dir = theme.preferedLocale == 'ar' ? 'rtl' : 'en'
+	db.theme.update(theme.id, theme)
+	document.documentElement.setAttribute('dir', dir)
+	i18n.locale.value = theme.preferedLocale
 
 
-const changeTheme = () => {
-
-	console.log('togllge')
-	themStore.toggleDarkMode()
 }
 </script>
 
 <template>
-	<h2  @click="changeTheme">Applayout</h2>
-	<nav>
-		{{ $t('hello') }}
-		<AppNav />
+	<div class="container">
 
-		<app-icon icon="moon" @click="changeTheme"></app-icon>
-		<app-image src="images/logo.webp"/>
-	</nav>
+		<div class="navigation">
+			<app-image src="images/logo.webp" />
+			<AppNav />
+			<div class="icons">
+				<app-icon icon="globe" :click="toggleLocale"></app-icon>
+				<app-icon icon="moon" :click="toggleDarkMode"></app-icon>
+
+			</div>
+		</div>
+
+	</div>
 	<RouterView v-slot="{ Component }">
 		<template v-if="Component">
-			<Transition mode="out-in">
-				<KeepAlive>
-					<Suspense>
-						<!-- main content -->
-						<component :is="Component"></component>
+			<KeepAlive>
+				<Suspense>
+					<!-- main content -->
+					<component :is="Component"></component>
 
-						<!-- loading state -->
-						<template #fallback>
-							Loading...
-						</template>
-					</Suspense>
-				</KeepAlive>
-			</Transition>
+					<!-- loading state -->
+					<template #fallback>
+						Loading...
+					</template>
+				</Suspense>
+			</KeepAlive>
 		</template>
 	</RouterView>
 	<footer>
 		Footer goes here better be on a component
 	</footer>
 
-</template> 
+</template>
+<style lang="scss">
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	& .icons {
+		display: flex;
+		align-items: center;
+		background-color: var('--p-content-background');
+		border: 1px solid var(--p-menubar-border-color);
+		padding: 1rem;
+		gap: 1rem;
+		border-radius: var(--p-menubar-border-radius);
+
+	}
+}
+</style>
