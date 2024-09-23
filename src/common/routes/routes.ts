@@ -2,7 +2,7 @@ import { createRouter, createWebHistory, type RouteLocationNormalized, type Navi
 import AppLayout from '@/common/components/AppLayout.vue'
 
 import landingRoutes from '@/app/landing/routes';
-
+ 
 const appRoutes = [
 	...landingRoutes,
 ]
@@ -14,10 +14,11 @@ const router = createRouter({
 		{
 			path: '/',
 			component: AppLayout,
-			redirect: '/landing',
+			redirect:'/landing',
 			children: appRoutes
 		},
 	]
 })
+// navigation guards
 
 export default router;

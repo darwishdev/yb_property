@@ -9,14 +9,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@buf/ahmeddarwish_abc-api.connectrpc_es": "^1.5.0-20240922000730-48c8686bc3cc.1",
+    "@bufbuild/connect-web": "^0.13.0",
+    "@connectrpc/connect": "^1.5.0",
     "@primevue/themes": "^4.0.7",
     "@types/node": "^22.5.5",
+    "dexie": "^4.0.8",
+    "pinia": "^2.2.2",
+    "primeicons": "^7.0.0",
     "primevue": "^4.0.7",
     "vue": "^3.4.37",
+    "vue-i18n": "^10.0.3",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^5.2.0",
     "@vitejs/plugin-vue": "^5.1.4",
+    "sass-embedded": "^1.79.3",
     "typescript": "^5.6.2",
     "vite": "^5.4.7",
     "vite-plugin-vue-devtools": "^7.4.5",
