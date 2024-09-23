@@ -1,8 +1,28 @@
-@import "_animation";
+*{
+    font-family: "Montserrat", sans-serif;  
+}
+.font-light {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 300 !important;
+}
+  
+.font-regular {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 400 !important;
+}
 
-html {
+.font-semibold {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 500 !important;
+}
 
-    background-color: var(--background-color);
+.font-bold {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 700 !important;
+}
+  
+body{
+    background-color:var(--background-color);
 }
 
 .container {
@@ -12,3 +32,4 @@ html {
 .app-icon {
     fill: var(--p-text-color)
 }
+
