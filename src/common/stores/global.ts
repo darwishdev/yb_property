@@ -35,6 +35,7 @@ export const useGlobalStore = defineStore('global', () => {
             Our hotel is more than just a place to stay; it’s an escape from the ordinary. From fine dining at our exclusive restaurants to relaxing by the pool or enjoying a stroll along the seafront, Rhactus ensures every moment of your stay is filled with comfort and pleasure. Discover the charm of Alexandria from the heart of one of its most iconic neighborhoods, and let Rhactus be your gateway to an unforgettable journey.`,
                 images: ['/property-img1.jpg', '/property-img2.jpg']
             },
+            bannerVideo : '/alex2.webm',
             sliderSlogan: 'Rhactus San Stefano – Where Luxury Meets the Mediterranean.',
             bannerSlogan: 'Experience Comfort, Embrace Elegance',
             partners: [

@@ -53,4 +53,14 @@ text-align: center;
 padding: 0 20px;
 }
 
+@media screen and (max-width : 500px) {
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+}
+
 </style>

@@ -113,7 +113,19 @@ body {
 }
 
 .app-icon {
-    fill: var(--p-text-color)
+    fill: var(--p-text-color);
+    stroke: var(--p-text-color);
+}
+.app-icon svg g{
+    stroke: var(--p-text-color);
+}
+.app-icon svg path{
+    stroke: var(--p-text-color);
+    fill: var(--p-text-color);
+}
+.app-icon svg rect{
+    stroke: var(--p-text-color);
+    fill: var(--p-text-color);
 }
 
 .p-overlay-mask {
