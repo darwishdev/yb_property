@@ -46,10 +46,18 @@ body{
     display: block;
 }
 
+.text-center {
+    text-align: center;
+}
+
 @media (min-width: 1025px) {
     .hide-desktop {
         display: none !important;
     }
+}
+
+.flex-column {
+    flex-direction: column !important;
 }
 
 @media (min-width: 1025px) {

@@ -1,7 +1,6 @@
 <script lang="ts">
 import db from '@/common/db/db';
 import apiClient from '@/common/api/ApiClient';
-import AppNav from './AppNav.vue';
 import { ThemeDefaults } from '../db/types';
 import { useThemeStore } from '../stores/theme';
 import Loading from './Loading.vue';
@@ -42,6 +41,8 @@ const initTheme = async () => {
 </script>
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
+import AppFooter from './AppFooter.vue';
+import AppNav from './AppNav.vue';
 import { ref } from 'vue';
 import { RouterView } from 'vue-router'
 import Drawer from 'primevue/drawer';
@@ -108,9 +109,7 @@ const toggleMenu = () => {
 			</KeepAlive>
 		</template>
 	</RouterView>
-	<footer>
-		<!-- Footer goes here better be on a component -->
-	</footer>
+	<app-footer />
 
 </template>
 <style lang="scss">
