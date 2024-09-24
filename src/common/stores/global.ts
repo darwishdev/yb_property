@@ -51,8 +51,8 @@ export const useGlobalStore = defineStore('global', () => {
     }
 
 
-    return {
-        websiteFind
-    }
+	return {
+		websiteFind , websiteFindResponse
+	}
 })
 

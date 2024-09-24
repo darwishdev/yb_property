@@ -4,6 +4,10 @@ import Section from '../components/Section.vue';
 import { ref } from 'vue';
 import { useGlobalStore } from '@/common/stores/global';
 import Banner from '../components/Banner.vue';
+import Map from '../components/Map.vue';
+import Carousel from 'primevue/carousel';
+import AppImage from '@/common/components/AppImage.vue';
+import Amenities from '../components/Amenities.vue';
 const globalStore = useGlobalStore()
 const images = ref([
 	{
@@ -18,15 +22,26 @@ const images = ref([
 ]);
 const responsiveOptions = ref([
     {
-        breakpoint: '1300px',
-        numVisible: 4
+        breakpoint: '1400px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '1199px',
+        numVisible: 3,
+        numScroll: 1
+    },
+    {
+        breakpoint: '767px',
+        numVisible: 2,
+        numScroll: 1
     },
     {
         breakpoint: '575px',
-        numVisible: 1
+        numVisible: 1,
+        numScroll: 1
     }
 ]);
-
 const data = await globalStore.websiteFind()
 
 </script>
@@ -35,20 +50,28 @@ const data = await globalStore.websiteFind()
 	<video width="100%" height="auto" preload="auto" autoplay muted loop>
 		<source src="../../../assets/alex2.webm" type="video/webm">
 	</video>
-	<!-- <div>
-		<Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" containerStyle="max-width: 640px"
-		:showItemNavigators="true">
-			<template #item="slotProps">
-				<img :src="slotProps.item.image" :alt="slotProps.item.alt" style="width: 100%; display: block;" />
-			</template>
-		</Galleria>
-	</div> -->
+
 	<Banner  bannerImage="https://www.rhactushotel.com/images/uploads/2022319588257.jpg" >
-		<div class="text-white w-full">
-			<h2>slogan</h2>
+		<div class="text-white w-full px-5">
+			<h1 class="text-left font-light text-white w-24rem">Experience Comfort, Embrace Elegance</h1>
+			<p class="text-white font-light px-2">Stay with Rhactus House in Alexandria.</p>
 		</div>
 	</Banner>
-	<Section title="About Rhactus" >
-		heeeey
+	<Section :title="`About ${globalStore.websiteFindResponse.property.propertyName}`" >
+		<Carousel :value="globalStore.websiteFindResponse.property.images" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
+			<template #item="slotProps">
+					<div class="mb-4">
+						<div class="relative mx-auto">
+							<AppImage :src="slotProps.data" :size="{ width : 200  }"></AppImage>
+						</div>
+					</div>
+			</template>
+		</Carousel>		
+	</Section>
+	<Section title="Our Amenities" >
+		<Amenities></Amenities>
+	</Section>
+	<Section title="Our Location" >
+			<Map class="w-full"></Map>
 	</Section>
 </template>
