@@ -74,7 +74,8 @@ const toggleMenu = () => {
 	<div class="container">
 
 		<div class="navigation">
-			<app-image src="images/logo.webp" />
+			<!-- <app-image src="images/logo.webp" /> -->
+			<img src="/rhactus-logo.png" class="max-w-3rem" />
 			<AppNav class="show-desktop" />
 			<div class="icons">
 				<app-icon icon="moon" :click="toggleDarkMode"></app-icon>
@@ -99,7 +100,9 @@ const toggleMenu = () => {
 
 					<!-- loading state -->
 					<template #fallback>
-						<Loading></Loading>
+						<div class="h-screen flex justify-content-center align-items-center">
+							<Loading></Loading>
+						</div>
 					</template>
 				</Suspense>
 			</KeepAlive>

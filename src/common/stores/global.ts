@@ -12,7 +12,9 @@ const websiteFind = () => {
         apiClient.propertyFindFiltered({filters : {}, propertyId : parseInt(import.meta.env.VITE_PROPERTY_ID)}).then((result) => {
             websiteFindResponse.value!.property = result
             setWebsiteDetails()
-            resolve(websiteFindResponse.value)
+            setTimeout(() => {
+                resolve(websiteFindResponse.value)
+            }, 600);
         }).catch((err) => {
             reject(err)
         });
