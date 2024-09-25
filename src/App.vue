@@ -4,27 +4,24 @@ import DynamicDialog from 'primevue/dynamicdialog';
 </script>
 
 <template>
-	<div class="app">
+	<div id=progress></div>
+	<RouterView v-slot="{ Component }">
+		<template v-if="Component">
+			<KeepAlive>
+				<Suspense>
+					<!-- main content -->
+					<component :is="Component"></component>
 
-		<UseScreenSafeArea top right bottom left>
+					<!-- loading state -->
+					<template #fallback>
+						<div class="h-screen flex justify-content-center align-items-center">
+							<Loading></Loading>
+						</div>
+					</template>
+				</Suspense>
+			</KeepAlive>
+		</template>
+	</RouterView>
+	<DynamicDialog />
 
-			<RouterView v-slot="{ Component }">
-				<template v-if="Component">
-					<KeepAlive>
-						<Suspense>
-							<!-- main content -->
-							<component :is="Component"></component>
-
-							<!-- loading state -->
-							<template #fallback>
-								Loading...
-							</template>
-						</Suspense>
-					</KeepAlive>
-				</template>
-			</RouterView>
-			<DynamicDialog />
-		</UseScreenSafeArea>
-
-	</div>
 </template>

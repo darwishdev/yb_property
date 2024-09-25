@@ -1,177 +1,177 @@
-.animate {
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
-  animation-duration: 500ms;
-  animation-timeline: view() !important;
-  animation-range: entry 0% cover 40% !important;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-h1,
-h2,
-h3,
-p {
-  background: linear-gradient(90deg, var(--p-text-color), transparent);
-  background-repeat: no-repeat;
-  background-size: 200%;
-  animation: reveal both linear;
-  background-clip: text;
-  animation-timeline: view() !important;
-  animation-range: entry 50% cover 50% !important;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.landing-pg-header {
-  background: linear-gradient(90deg, black, transparent);
-  background-repeat: no-repeat;
-  background-size: 200%;
-  animation: reveal;
-  background-clip: text;
-  animation-duration: 23ms;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-@keyframes reveal {
-  0% {
-    transform: translate(-2rem, -2rem);
-    background-position-x: 200%;
-
-  }
-
-  100% {
-    transform: translate(0);
-    background-position-x: 0%;
-
-  }
-}
-
-
-// @keyframes width {
-//   0% {
-//     width: 0;
-//   }
-
-//   100% {
-//     width: 100%;
-//   }
+// .animate {
+//   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+//   animation-duration: 500ms;
+//   animation-timeline: view() !important;
+//   animation-range: entry 0% cover 40% !important;
 // }
-
-// @keyframes zoom-in {
+//
+// @keyframes fadein {
 //   0% {
 //     opacity: 0.5;
-//     transform: scale(0.9);
 //   }
-
+//
 //   100% {
 //     opacity: 1;
-//     transform: scale(1);
 //   }
 // }
-
-// @keyframes zoom-left {
+//
+// h1,
+// h2,
+// h3,
+// p {
+//   background: linear-gradient(90deg, var(--p-text-color), transparent);
+//   background-repeat: no-repeat;
+//   background-size: 200%;
+//   animation: reveal both linear;
+//   background-clip: text;
+//   animation-timeline: view() !important;
+//   animation-range: entry 50% cover 50% !important;
+//   -webkit-background-clip: text;
+//   color: transparent;
+// }
+//
+// .landing-pg-header {
+//   background: linear-gradient(90deg, black, transparent);
+//   background-repeat: no-repeat;
+//   background-size: 200%;
+//   animation: reveal;
+//   background-clip: text;
+//   animation-duration: 23ms;
+//   -webkit-background-clip: text;
+//   color: transparent;
+// }
+//
+// @keyframes reveal {
 //   0% {
-//     opacity: 0.5;
-//     transform: translateX(-10%) scale(0.9);
+//     transform: translate(-2rem, -2rem);
+//     background-position-x: 200%;
+//
 //   }
-
+//
 //   100% {
-//     opacity: 1;
-//     transform: translateX(0%) scale(1);
+//     transform: translate(0);
+//     background-position-x: 0%;
+//
 //   }
 // }
-
-// @keyframes zoom-right {
+//
+//
+// // @keyframes width {
+// //   0% {
+// //     width: 0;
+// //   }
+//
+// //   100% {
+// //     width: 100%;
+// //   }
+// // }
+//
+// // @keyframes zoom-in {
+// //   0% {
+// //     opacity: 0.5;
+// //     transform: scale(0.9);
+// //   }
+//
+// //   100% {
+// //     opacity: 1;
+// //     transform: scale(1);
+// //   }
+// // }
+//
+// // @keyframes zoom-left {
+// //   0% {
+// //     opacity: 0.5;
+// //     transform: translateX(-10%) scale(0.9);
+// //   }
+//
+// //   100% {
+// //     opacity: 1;
+// //     transform: translateX(0%) scale(1);
+// //   }
+// // }
+//
+// // @keyframes zoom-right {
+// //   0% {
+// //     opacity: 0.5;
+// //     transform: translateX(10%) scale(0.9);
+// //   }
+//
+// //   100% {
+// //     opacity: 1;
+// //     transform: translateX(0%) scale(1);
+// //   }
+// // }
+//
+// @keyframes fade-left {
+//   from {
+//     opacity: 0;
+//     transform: translateX(-10%);
+//     transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1),
+//       opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
+//   }
+//
+//   to {
+//     opacity: 1;
+//     transform: translateX(0%);
+//   }
+// }
+//
+// @keyframes fade-right {
 //   0% {
-//     opacity: 0.5;
-//     transform: translateX(10%) scale(0.9);
+//     opacity: 0;
+//     transform: translateX(10%);
+//     transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+//       opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
 //   }
-
+//
 //   100% {
 //     opacity: 1;
-//     transform: translateX(0%) scale(1);
+//     transform: translateX(0%);
 //   }
 // }
-
-@keyframes fade-left {
-  from {
-    opacity: 0;
-    transform: translateX(-10%);
-    transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1),
-      opacity 0.3s cubic-bezier(0, 0, 0.2, 1);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes fade-right {
-  0% {
-    opacity: 0;
-    transform: translateX(10%);
-    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
-      opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
-      opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-up {
-  animation: fade-up;
-}
-
-.fade-left {
-  animation: fade-left;
-}
-
-// .fadein {
-//   animation: fadein;
+//
+// @keyframes fade-up {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(50%);
+//     transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+//       opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+//   }
+//
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
 // }
-
-// .zoom-in {
-//   animation: zoom-in;
+//
+// .fade-up {
+//   animation: fade-up;
 // }
-
-// .zoom-left {
-//   animation: zoom-left;
+//
+// .fade-left {
+//   animation: fade-left;
 // }
-
-// .zoom-right {
-//   animation: zoom-right;
+//
+// // .fadein {
+// //   animation: fadein;
+// // }
+//
+// // .zoom-in {
+// //   animation: zoom-in;
+// // }
+//
+// // .zoom-left {
+// //   animation: zoom-left;
+// // }
+//
+// // .zoom-right {
+// //   animation: zoom-right;
+// // }
+//
+// .fade-right {
+//   animation: fade-right;
 // }
-
-.fade-right {
-  animation: fade-right;
-}
-
-// .animate-width {
-//   animation: width;
-// }
+//
+// // .animate-width {
+// //   animation: width;
+// // }

@@ -3,8 +3,6 @@ import db from '@/common/db/db';
 import apiClient from '@/common/api/ApiClient';
 import { ThemeDefaults } from '../db/types';
 import Loading from './Loading.vue';
-import { useWindowScroll } from '@vueuse/core'
-const { y: scrollPosition } = useWindowScroll()
 const initIcons = (): Promise<void> => {
 	return new Promise((resolve) => {
 		db.icons.count().then(count => {
@@ -76,7 +74,7 @@ const toggleMenu = () => {
 <template>
 
 
-	<div class="top-bar" :class="{ 'bg-content': scrollPosition > 20 }">
+	<div class="top-bar glass">
 		<div class="container">
 
 			<div class="navigation">
@@ -116,27 +114,24 @@ const toggleMenu = () => {
 			</KeepAlive>
 		</template>
 	</RouterView>
-	<app-footer />
-
+	<AppFooter />
 </template>
 <style lang="scss">
 .top-bar {
 
 
-
+	overflow: hidden;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	height: var(--top-bar-height);
-	z-index: 1000;
+	z-index: 99;
 	transition: all .3s ease-in-out;
 	overflow: hidden;
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
 	position: -o-sticky;
-	backdrop-filter: blur(8px);
-	background-color: var(--topbar-sticky-background);
 	border-bottom: 1px solid var(--border-color);
 
 }

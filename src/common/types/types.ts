@@ -25,44 +25,45 @@ export type AppIconSlots = {
 
 export type AppImageProps = {
   src: string
+  maxHeight?: string
   imageProps?: ImageProps
   size?: Size
 }
 export type LocaleType = { dir: 'ltr' | 'rtl', locale: SUPPORTED_LOCALES_TYPE }
 
 export type WebsiteFindResponse = {
-  website : {
-    email : string
-    phone : string
-    logo : string
-    socialLinks : {
-      facebook? : string
-      instagram? : string
-      tripadvisor? : string
-      twitter? : string
+  website: {
+    email: string
+    phone: string
+    logo: string
+    socialLinks: {
+      facebook?: string
+      instagram?: string
+      tripadvisor?: string
+      twitter?: string
     }
-    sliderImages? : string[]
-    bannerVideo? : string
-    sliderSlogan? : string
-    aboutImages? : string[]
-    bannerSlogan? : string
-    nearbyLocations? : {
-      locationName : string
-      distanceFromProperty : string
-      image? : string
-      rating? : string
+    sliderImages?: string[]
+    bannerVideo?: string
+    sliderSlogan?: string
+    aboutImages?: string[]
+    bannerSlogan?: string
+    nearbyLocations?: {
+      locationName: string
+      distanceFromProperty: string
+      image?: string
+      rating?: string
     }[]
-    partners : {
-      partnerName : string
-      partnerImage : string
-      partnerDescription? : string
+    partners: {
+      partnerName: string
+      partnerImage: string
+      partnerDescription?: string
     }[]
-    propertyDiscoverMore : {
-      article : string
-      images : string[]
+    propertyDiscoverMore: {
+      article: string
+      images: string[]
     }
-    footerParagrapgh : string
+    footerParagrapgh: string
   }
-  property : PropertyFindFilteredResponse
+  property: PropertyFindFilteredResponse
 }
 

@@ -26,13 +26,10 @@ const renderImage = () => {
         height: sizeObj ? sizeObj.height : undefined,
         ...props.imageProps
     }
-    return h(Image, { ...imgProps, onError: () => imageSrc.value = fallBackImageUrl }, () => slots)
-}
-const update = (src: string) => {
-    // imageSrc.value = `${baseImageUrl}${src}`
+    return h(Image, { ...imgProps, style: { maxHeight: props.maxHeight }, onError: () => imageSrc.value = fallBackImageUrl }, () => slots)
 }
 
-defineExpose({ update })
+
 </script>
 
 <template>

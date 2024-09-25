@@ -4,17 +4,17 @@ import Aura from '@primevue/themes/aura';
 const MyPreset = definePreset(Aura, {
 	semantic: {
 		primary: {
-			50: '{indigo.50}',
-			100: '{indigo.100}',
-			200: '{indigo.200}',
-			300: '{indigo.300}',
-			400: '{indigo.400}',
-			500: '{indigo.500}',
-			600: '{indigo.600}',
-			700: '{indigo.700}',
-			800: '{indigo.800}',
-			900: '{indigo.900}',
-			950: '{indigo.950}'
+			50: '#BC955C',
+			100: '#8c734B',
+			200: '#8c734B',
+			300: '#8c734B',
+			400: '#8c734B',
+			500: '#8c734B',
+			600: '#8c734B',
+			700: '#8c734B',
+			800: '#8C734B',
+			900: '#8C734B',
+			950: '#8C734B'
 		},
 		content: {
 			background: 'red'

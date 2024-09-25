@@ -4,11 +4,18 @@
     --top-bar-height: 5rem;
     --top-bar-height-minus: -5rem;
     --p-color-glass: rgba(255, 255, 255, .4);
-    --p-color-background: #EEEEEE;
+    --p-glass: hsla(0, 0%, 100%, .7);
+    --p-color-background: #fff;
+    --p-color-background-darker: #ede4df;
+    --p-secondary-color: #0E3845;
+    --swiper-pagination-color: var(--p-secondary-color)
 }
 
 .my-app-dark {
-    --p-color-background: #222831;
+    --p-color-background: #2d2824;
+    --p-color-background-darker: #11100e;
+    --p-secondary-color: #fba40c;
+    --p-glass: rgba(0, 0, 0, .3);
 }
 
 /* Simple CSS Reset */
@@ -35,15 +42,21 @@ body {
     font-size: 16px;
     /* Set a default font size */
     background: var(--p-color-background);
+
+    & .darker {
+        background: var(--p-color-background-darker);
+    }
 }
 
 h1,
-h2,
-h3,
+h2 {
+    font-weight: 800;
+}
+
 h4,
 h5,
 h6 {
-    font-weight: normal;
+    font-weight: 600;
     /* Normalize heading font weights */
 }
 
@@ -51,6 +64,12 @@ ul,
 ol {
     list-style: none;
     /* Remove default list styles */
+}
+
+p,
+h3 {
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 img {
@@ -127,7 +146,22 @@ img {
 }
 
 .app-icon {
-    fill: var(--p-text-color)
+    fill: var(--p-text-color);
+    stroke: var(--p-text-color);
+}
+
+.app-icon svg g {
+    stroke: var(--p-text-color);
+}
+
+.app-icon svg path {
+    stroke: var(--p-text-color);
+    fill: var(--p-text-color);
+}
+
+.app-icon svg rect {
+    stroke: var(--p-text-color);
+    fill: var(--p-text-color);
 }
 
 .p-overlay-mask {
@@ -185,4 +219,38 @@ p {
         font-size: 0.8rem;
         line-height: 1.8;
     }
+}
+
+.glass {
+    backdrop-filter: blur(8px);
+    background-color: var(--p-glass);
+
+}
+
+@keyframes progress {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 500px;
+    }
+}
+
+#app {
+    scroll-timeline-name: --foo, --bar;
+    width: 100vw;
+    height: 100vh;
+    overflowX: scroll;
+}
+
+
+
+#progress {
+    position: fixed;
+    height: 3px;
+    z-index: 100;
+    background-color: var(--p-primary-color);
+    animation: progress linear forwards;
+    animation-timeline: --foo;
 }

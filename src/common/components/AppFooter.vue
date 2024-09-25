@@ -9,20 +9,20 @@ const contact = ref({
 });
 </script>
 <template>
-	<footer class="app-footer">
-		<div class="container">
-			<div class="show-desktop">
+	<footer class="app-footer darker">
+		<div class="container pt-8">
+			<div class="show-desktop mb-4">
 				<div class="grid">
 					<div class="logo">
 						<app-image src="images/logo.webp" />
-						<p v-t="'about_us_footer'" />
+						<p v-t="'about_us_footer'" class="mt-6" />
 					</div>
 					<div class="nav">
-						<h3 v-t="'comppany'" />
+						<h3 v-t="'comppany'" class="mb-4" />
 						<AppNav class="flex-column" />
 					</div>
 					<div class="contact">
-						<h3 v-t="'contacts'" />
+						<h3 v-t="'contacts'" class="mb-4" />
 						<p>
 							<span v-t="'phone'"></span>: {{ contact.phone }}
 						</p>
@@ -36,13 +36,16 @@ const contact = ref({
 
 				</div>
 			</div>
-			<p class="text-center" v-t="'copyright'" />
+			<p class="text-center copyright" v-t="'copyright'" />
 		</div>
 	</footer>
 </template>
 <style lang="scss">
 .app-footer {
-	padding: 1rem 0;
+
+	.copyright {
+		padding-block: 1rem;
+	}
 
 	.grid {
 		display: grid;
