@@ -1,5 +1,16 @@
 @import "_animation";
 
+:root {
+    --top-bar-height: 5rem;
+    --top-bar-height-minus: -5rem;
+    --p-color-glass: rgba(255, 255, 255, .4);
+    --p-color-background: #EEEEEE;
+}
+
+.my-app-dark {
+    --p-color-background: #222831;
+}
+
 /* Simple CSS Reset */
 * {
     margin: 0;
@@ -11,14 +22,19 @@ html {
     line-height: 1.15;
     /* Improve readability */
     -webkit-text-size-adjust: 100%;
+    font-size: 16px;
+    /* Default font size */
+    overflow: hidden auto;
     /* Prevent font scaling in iOS */
 }
 
 body {
     font-family: sans-serif;
     /* Set a default font */
+    overflow: hidden auto;
     font-size: 16px;
     /* Set a default font size */
+    background: var(--p-color-background);
 }
 
 h1,
@@ -68,9 +84,7 @@ img {
     font-weight: 700 !important;
 }
 
-body {
-    background-color: var(--background-color);
-}
+
 
 .ltr {
     direction: ltr;
@@ -118,4 +132,57 @@ body {
 
 .p-overlay-mask {
     direction: ltr;
+}
+
+@supports(padding: max(0px)) {
+    #app {}
+}
+
+#app {}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsive Typography */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 1.8;
+    }
 }

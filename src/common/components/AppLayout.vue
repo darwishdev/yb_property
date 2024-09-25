@@ -2,8 +2,9 @@
 import db from '@/common/db/db';
 import apiClient from '@/common/api/ApiClient';
 import { ThemeDefaults } from '../db/types';
-import { useThemeStore } from '../stores/theme';
 import Loading from './Loading.vue';
+import { useWindowScroll } from '@vueuse/core'
+const { y: scrollPosition } = useWindowScroll()
 const initIcons = (): Promise<void> => {
 	return new Promise((resolve) => {
 		db.icons.count().then(count => {
@@ -69,25 +70,31 @@ const toggleMenu = () => {
 	console.log('toggle menu')
 	isMenuOpenedRef.value = !isMenuOpenedRef.value
 }
+
 </script>
 
 <template>
-	<div class="container">
 
-		<div class="navigation">
-			<!-- <app-image src="images/logo.webp" /> -->
-			<img src="/rhactus-logo.png" class="max-w-3rem" />
-			<AppNav class="show-desktop" />
-			<div class="icons">
-				<app-icon icon="moon" :click="toggleDarkMode"></app-icon>
-				<app-icon icon="globe" :click="toggleLocale"></app-icon>
 
-				<app-icon icon="menu" :click="toggleMenu" class="hide-desktop"></app-icon>
+	<div class="top-bar" :class="{ 'bg-content': scrollPosition > 20 }">
+		<div class="container">
+
+			<div class="navigation">
+				<!-- <app-image src="images/logo.webp" /> -->
+				<img src="/rhactus-logo.png" class="max-w-3rem" />
+				<AppNav class="show-desktop" />
+				<div class="icons">
+					<app-icon icon="moon" :click="toggleDarkMode"></app-icon>
+					<app-icon icon="globe" :click="toggleLocale"></app-icon>
+
+					<app-icon icon="menu" :click="toggleMenu" class="hide-desktop"></app-icon>
+				</div>
+				<Drawer v-model:visible="isMenuOpenedRef" position="right" :header="$t('menu')">
+					<AppNav />
+				</Drawer>
+
+
 			</div>
-			<Drawer v-model:visible="isMenuOpenedRef" position="right" :header="$t('menu')">
-				<AppNav />
-			</Drawer>
-
 
 		</div>
 
@@ -113,10 +120,32 @@ const toggleMenu = () => {
 
 </template>
 <style lang="scss">
+.top-bar {
+
+
+
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: var(--top-bar-height);
+	z-index: 1000;
+	transition: all .3s ease-in-out;
+	overflow: hidden;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	backdrop-filter: blur(8px);
+	background-color: var(--topbar-sticky-background);
+	border-bottom: 1px solid var(--border-color);
+
+}
+
 .navigation {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	height: var(--top-bar-height);
 
 	& .icons {
 		display: flex;
@@ -126,7 +155,8 @@ const toggleMenu = () => {
 		padding: 1rem;
 		gap: 1rem;
 		border-radius: var(--p-menubar-border-radius);
-
+		background: var(--p-color-glass);
+		border-radius: 3rem;
 	}
 }
 </style>
